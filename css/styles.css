@@ -51,6 +51,9 @@ a {
 .page-header {
   border-bottom: 1px solid #e7e9fc;
 }
+.header-container{
+  justify-content:space-between;
+}
 .page-header-container {
   justify-content: flex-start;
   align-items: center;
