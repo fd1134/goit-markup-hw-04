@@ -259,6 +259,21 @@ address .link:hover {
   line-height: 1.111;
   text-align: center;
 }
+.portfolio-item{
+  position: relative;
+}
+.portfolio-item:hover::before{
+  position: absolute;
+  display: block;
+  background-color: #4D5AE5;
+  width: 100%;
+  height: 67%;
+  top:0px;
+  color: #fff;
+  padding: 30px 20px;
+  content: "14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App";
+  
+}
 .portfolio-title {
   margin-bottom: 72px;
 }
