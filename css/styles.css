@@ -51,8 +51,8 @@ a {
 .page-header {
   border-bottom: 1px solid #e7e9fc;
 }
-.header-container{
-  justify-content:space-between;
+.header-container {
+  justify-content: space-between;
 }
 .page-header-container {
   justify-content: flex-start;
@@ -254,13 +254,23 @@ address .link:hover {
   flex-shrink: 0;
   padding: 0 20px;
 }
-.icon {
+.social-links .link {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
   border-radius: 50%;
-  background-color: #4d5ae5;
+  background-color: #404bbf;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #dfe0e7;
 }
 
 .icon:hover {
-  background-color: #03a9f4;
+  fill: #03a9f4;
 }
 .team h2,
 .portfolio h2 {
