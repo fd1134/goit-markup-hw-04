@@ -2,13 +2,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-*:hover,
-*:active,
-*:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 body {
   font-family: "Roboto", "Verdana", "Tahoma", sans-serif;
   background-color: #ffffff;
@@ -82,6 +79,7 @@ a {
   gap: 40px;
 }
 .item-navigation {
+  position: relative;
   padding: 24px 0;
 }
 .item-navigation .link {
@@ -89,18 +87,21 @@ a {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  transition-property: color;
 }
 
 .item-navigation .link:hover {
   color: #404bbf;
 }
-.item-navigation:hover::after {
-  text-decoration: underline;
+
+.item-navigation .link:active::after {
   content: "";
-}
-.item-navigation .link:active {
-  color: #404bbf;
-  text-decoration: underline;
+  background-color: #404bbf;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
 }
 .adress-list {
   display: flex;
@@ -115,6 +116,7 @@ address .link {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  transition-property: color;
 }
 address .link:hover {
   color: #404bbf;
@@ -158,8 +160,9 @@ address .link:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition-property: background-color;
 }
-.page-hero button:hover {
+.page-hero .btn-page:hover {
   background-color: #404bbf;
 }
 
@@ -229,6 +232,7 @@ address .link:hover {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   background-color: #fff;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.14);
 }
 
 .team-info {
@@ -261,17 +265,17 @@ address .link:hover {
   border-radius: 50%;
   background-color: #404bbf;
 }
+.social-links .link:hover {
+  background-color: #31d0aa;
+}
 
 .icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: #dfe0e7;
+  fill: #fff;
 }
 
-.icon:hover {
-  fill: #03a9f4;
-}
 .team h2,
 .portfolio h2 {
   color: #2e2f42;
@@ -282,6 +286,11 @@ address .link:hover {
 }
 .portfolio-item {
   position: relative;
+  cursor: pointer;
+  transition-property: box-shadow;
+}
+.portfolio-item:hover {
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.14);
 }
 .portfolio-item:hover::before {
   position: absolute;
